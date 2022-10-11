@@ -67,11 +67,6 @@ function App() {
                     <div>Champion Name: {data.championName}</div>
                     <div>Champion Level: {data.champLevel}</div>
                     <div>Creep Score: {data.totalMinionsKilled}</div>
-                    <div> Summoner Spells:
-                      <ul>
-                        <li>{data.perkStyle}</li>
-                      </ul>
-                    </div>
                     <div>Items:
                       <ul class='items'>
                         <li><img src={data.item0 !== 0 ? `https://ddragon.leagueoflegends.com/cdn/12.9.1/img/item/${data.item0}.png` : `https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Grey_Square.svg/100px-Grey_Square.svg.png?20081224151911`} alt='item1'/></li>
