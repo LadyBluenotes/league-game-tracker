@@ -32,7 +32,20 @@ const getMatchIDs = (puuid) => {
         .catch(err => console.log(err.message))
 }
 
-router.get('/:id', async (req, res) =>{
+router.get('/:id', (req, res) =>{
+    return leagueJs.Summoner
+	.gettingByName(req.params.id)
+	.then(data => {
+		console.log(data)
+		return data
+	})
+	.catch(err => {
+		'use strict';
+		console.log(err);
+	});
+})
+
+router.get('/:id/matches', async (req, res) =>{
     const puuid = await getSummonerPuuid(req.params.id);
     
     const matchIDs = await getMatchIDs(puuid);
@@ -42,7 +55,7 @@ router.get('/:id', async (req, res) =>{
     for (let i = 0; i < matchIDs.length; i++) {
         const match = matchIDs[i]
         const matchData = await axios.get(`https://americas.api.riotgames.com/lol/match/v5/matches/${match}?api_key=${key}`)
-        .then(res => console.log(res.data.info))
+        .then(res => res.data.info)
         .catch(err => console.log(err))
         matches.push(matchData)
     }
