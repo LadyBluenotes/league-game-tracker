@@ -1,1 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    background-color: #e9e6df;
+}
+
+.form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+h1{
+    color: #0A323C;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline overline;
+    text-decoration-color: #785A28;
+}
+
+.matches {
+    font-size: 2rem;
+    color:#3C3C41;
+    padding-bottom: 0px;
+    padding-top: 50px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+input[type=text] {
+    font-size: 1.3rem;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #5B5A56;
+    background-color: #e9e6df;
+}
+
+input[type=submit] {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #091428;
+    background-color: #C8AA6E;
+    font-size: 1.2rem;
+}
+
+.searchName {
+    color: #0A323C;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration-color: #785A28;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.allPlayers {
+    display:flex;
+    flex-direction: row;
+    row-gap: 15px;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.playerClass {
+    font-size: 0.8rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 320px
+}
+
+.summoner {
+    text-align:center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+ul{
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+li>img {
+    height: 30px;
+}
+
+.playerClass > .champImg {
+    width: 80px;
+    margin-left: 110px;
+    margin-top: 20px;
+}
