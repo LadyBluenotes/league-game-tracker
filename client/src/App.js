@@ -14,11 +14,11 @@ function App() {
       summonerName: searchSummoner
     })
 
-    await axios.get(`http://localhost:8000/${searchSummoner.replace(/%20/g, " ")}`)
+    await axios.get(`https://backend-league-production.up.railway.app/${searchSummoner.replace(/%20/g, " ")}`)
       .then((res) => setSummonerName(res.data))
       .catch((err) => console.log(err.message))
 
-    await axios.get(`http://localhost:8000/${searchSummoner.replace(/%20/g, " ")}/matches`)
+    await axios.get(`https://backend-league-production.up.railway.app/${searchSummoner.replace(/%20/g, " ")}/matches`)
       .then((res) => setMatchHistory(res.data))
       .catch((err) => console.log(err.message))
 
